@@ -3,7 +3,6 @@ import os
 import usb.core
 import time
 import sys
-import sys.path
 import logging
 
 #os.environ['PYUSB_DEBUG_LEVEL'] = 'debug'
