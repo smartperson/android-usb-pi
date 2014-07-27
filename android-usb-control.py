@@ -8,7 +8,7 @@ import logging
 #os.environ['PYUSB_DEBUG_LEVEL'] = 'debug'
 #os.environ['PYUSB_DEBUG'] = 'debug'
 #os.environ['LIBUSB_DEBUG'] = '3'
-#os.environ['PYUSB_LOG_FILENAME'] = '/home/pi/android-usb.log'
+#os.environ['PYUSB_LOG_FILENAME'] = '~/android-usb-pi/logs/android-usb.log'
 
 def send_command(dev_handle, command):
     dev_handle.ctrl_transfer(0x40, 57, 0x01, 0, command)
@@ -25,7 +25,7 @@ def main():
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
     # create a file handler
-    handler = logging.FileHandler('/home/pi/android-usb.log')
+    handler = logging.FileHandler('~/android-usb-pi/logs/android-usb.log')
     handler.setLevel(logging.DEBUG)
     
     # create a logging format
@@ -80,7 +80,7 @@ def main():
     #send_prevtrack(dev)
     
     while True:
-        in_pipe = open('/home/pi/android_control_pipe', 'r')
+        in_pipe = open('~/android-usb-pi/android_control_pipe', 'r')
         c = in_pipe.read()
         if c.endswith("\n"): c = c[:-1]
         in_pipe.close()
