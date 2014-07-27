@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 import os
+import usb.core
+import time
+import sys
+import logging
 
 #os.environ['PYUSB_DEBUG_LEVEL'] = 'debug'
 #os.environ['PYUSB_DEBUG'] = 'debug'
 #os.environ['LIBUSB_DEBUG'] = '3'
 os.environ['PYUSB_LOG_FILENAME'] = os.path('~/android-usb-pi/logs/android-usb.log')
 
-import usb.core
-import time
-import sys
-import logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
