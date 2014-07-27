@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import os.path
 import usb.core
 import time
 import sys
@@ -8,13 +9,13 @@ import logging
 #os.environ['PYUSB_DEBUG_LEVEL'] = 'debug'
 #os.environ['PYUSB_DEBUG'] = 'debug'
 #os.environ['LIBUSB_DEBUG'] = '3'
-os.environ['PYUSB_LOG_FILENAME'] = os.path.abspath('~/android-usb-pi/logs/android-usb.log')
+os.environ['PYUSB_LOG_FILENAME'] = os.path.expanduser('~/android-usb-pi/logs/android-usb.log')
 
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 # create a file handler
-handler = logging.FileHandler(os.path.abspath('~/android-usb-pi/logs/android-usb.log'))
+handler = logging.FileHandler(os.path.expanduser('~/android-usb-pi/logs/android-usb.log'))
 handler.setLevel(logging.INFO)
 
 # create a logging format
