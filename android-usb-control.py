@@ -25,7 +25,7 @@ def main():
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
     # create a file handler
-    handler = logging.FileHandler('~/android-usb-pi/logs/android-usb.log')
+    handler = logging.FileHandler(os.path.expanduser('~/android-usb-pi/logs/android-usb.log'))
     handler.setLevel(logging.DEBUG)
     
     # create a logging format
