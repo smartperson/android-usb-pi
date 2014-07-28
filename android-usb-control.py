@@ -12,6 +12,7 @@ import logging
 
 def send_command(dev_handle, command):
     dev_handle.ctrl_transfer(0x40, 57, 0x01, 0, command)
+    logger.info('sending command %d', command)
     #dev_handle.ctrl_transfer(0x40, 57, 0x01, 0, '\x00')
 
 def send_playpause(dev_handle):
@@ -81,7 +82,7 @@ def main():
     
     while True:
         in_pipe = open(os.path.expanduser('~/android-usb-pi/android_control_pipe'), 'a+')
-        c = in_pipe.read()
+        c = in_pipe.readline()
         #if c.endswith("\n"): c = c[:-1]
         in_pipe.close()
         #sys.stdout.write(c)
