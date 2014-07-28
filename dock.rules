@@ -1,3 +1,3 @@
-ACTION=="add",SUBSYSTEM=="usb",ATTR{idVendor}=="18d1",ATTR{idProduct}=="4ee2",RUN+="~/android-usb-pi/phone_docked.sh %s{idVendor} %s{idProduct} >> ~/android-usb-pi/logs/android-usb-audio.log"
-ACTION=="add",SUBSYSTEM=="usb",ATTR{idVendor}=="18d1",ATTR{idProduct}=="4ee1",RUN+="~/android-usb-pi/phone_docked.sh %s{idVendor} %s{idProduct} >> ~/android-usb-pi/logs/android-usb-audio.log"
-ACTION=="add",SUBSYSTEM=="usb",ATTR{idVendor}=="18d1",ATTR{idProduct}=="2d03",RUN+="~/android-usb-pi/phone_docked.sh %s{idVendor} %s{idProduct} >> ~/android-usb-pi/logs/android-usb-audio.log"
+ACTION=="add",SUBSYSTEM=="usb",ATTR{idVendor}=="18d1",ATTR{idProduct}=="4ee2",RUN+="/root/android-usb-pi/phone_docked.sh %s{idVendor} %s{idProduct} >> /root/android-usb-pi/logs/android-usb-audio.log"
+ACTION=="add",SUBSYSTEM=="usb",ATTR{idVendor}=="18d1",ATTR{idProduct}=="4ee1",RUN+="/root/android-usb-pi/phone_docked.sh %s{idVendor} %s{idProduct} >> /root/android-usb-pi/logs/android-usb-audio.log"
+ACTION=="add",SUBSYSTEM=="usb",ATTR{idVendor}=="18d1",ATTR{idProduct}=="2d03",RUN+="/root/android-usb-pi/phone_docked.sh %s{idVendor} %s{idProduct} >> /root/android-usb-pi/logs/android-usb-audio.log"
