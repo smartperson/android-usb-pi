@@ -80,19 +80,19 @@ def main():
     #send_prevtrack(dev)
     
     while True:
-        in_pipe = open('~/android-usb-pi/android_control_pipe', 'r')
+        in_pipe = open(os.path.expanduser('~/android-usb-pi/android_control_pipe'), 'a+')
         c = in_pipe.read()
-        if c.endswith("\n"): c = c[:-1]
+        #if c.endswith("\n"): c = c[:-1]
         in_pipe.close()
         #sys.stdout.write(c)
         print c
         if c == "\n":
             break
-        elif c == 'a':
+        elif c == "a\n":
             send_prevtrack(dev)
-        elif c == 's':
+        elif c == "s\n":
             send_playpause(dev)
-        elif c == 'd':
+        elif c == "d\n":
             send_nexttrack(dev)
         else:
             print 'invalid command'
