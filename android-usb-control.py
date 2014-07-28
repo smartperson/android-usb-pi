@@ -12,7 +12,6 @@ import logging
 
 def send_command(dev_handle, command):
     dev_handle.ctrl_transfer(0x40, 57, 0x01, 0, command)
-    logger.info('sending command %d', command)
     #dev_handle.ctrl_transfer(0x40, 57, 0x01, 0, '\x00')
 
 def send_playpause(dev_handle):
