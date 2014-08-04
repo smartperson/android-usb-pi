@@ -15,6 +15,7 @@ A collection of scripts to allow a Raspberry Pi running a Raspbian-like OS to st
 * format this document more nicely
 
 ### Instructions
+1. clone this code so that it resides in ```~/android-usb-pi/```
 1. dock.rules goes into your ```/etc/udev/rules.d/```
 2. create a named pipe at ```~/android-usb-pi/android_control_pipe```
 3. customize your pulseaudio setup if you have to, defaults should work.
