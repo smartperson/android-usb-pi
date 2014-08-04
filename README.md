@@ -1,6 +1,7 @@
 # android-usb-pi
 
-A collection of scripts to allow a Raspberry Pi running a Raspbian-like OS to stream audio and control media from of Android 4.x device over USB.
+A collection of scripts to allow a Raspberry Pi running a Raspbian-like OS to stream audio and control media from of Android 4.x device over USB.  
+* Credit to Jacek Fedoryński's [blog post](http://blog.jfedor.org/2013/01/usb-audio-dock-for-android.html) for the basics on AOA 2.0 audio communications with Raspberry Pi.
 
 ## Prerequisites
 1. Raspbian-based OS
